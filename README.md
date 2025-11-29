@@ -90,6 +90,8 @@ The app includes features such as user accounts, favorites, search & filters, ra
 ![pdf](https://github.com/user-attachments/assets/d40e8117-f240-4dfb-b284-3465dd01d3a8)
 
 
+![settings](https://github.com/user-attachments/assets/9b34a2cd-f541-4b45-944e-2630ad062f93)
+![profile](https://github.com/user-attachments/assets/111493a2-4f26-4ab9-b398-e842cc93efeb)
 
 
 
