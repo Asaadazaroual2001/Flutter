@@ -1,7 +1,27 @@
 import 'package:flutter/material.dart';
-import 'src/recipes_app.dart';  // updated file
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
+import 'firebase_options.dart';
+import 'recipes_app.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const RecipesApp());
+
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } on FirebaseException catch (e) {
+    // Ignore "duplicate-app" if it ever happens, but crash for any other error
+    if (e.code != 'duplicate-app') {
+      rethrow;
+    }
+  }
+
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }

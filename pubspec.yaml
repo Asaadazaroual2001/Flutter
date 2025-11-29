@@ -31,5 +31,30 @@ dependencies:
 
   flutter_svg: ^2.0.9
 
+  http: ^1.2.0
+  mime: ^1.0.5
+  http_parser: ^4.0.2
+
 dev_dependencies:
   flutter_lints: ^3.0.2
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.jpeg
+
+# ---------------------------------------------------------
+# ✅ ADD YOUR SPLASH CONFIG HERE (correct location)
+# ---------------------------------------------------------
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/logo.jpeg
+
+  android: true
+  ios: true
+
+  # optional dark mode
+  color_dark: "#000000"
+  image_dark: assets/logo.jpeg
+

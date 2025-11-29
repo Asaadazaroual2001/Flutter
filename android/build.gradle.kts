@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.2.2") // probably already exists
+        classpath("com.google.gms:google-services:4.4.2") // <-- add this line
+    }
+}
+
+
 allprojects {
     repositories {
         google()
