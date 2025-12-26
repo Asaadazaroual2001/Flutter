@@ -8,7 +8,8 @@ import '../utils/firestore_paths.dart';
 class RecipeService {
   final FirebaseFirestore _db;
 
-  RecipeService({FirebaseFirestore? db}) : _db = db ?? FirebaseFirestore.instance;
+  RecipeService({FirebaseFirestore? db})
+      : _db = db ?? FirebaseFirestore.instance;
 
   CollectionReference<Map<String, dynamic>> get _recipesCol =>
       _db.collection(FirestorePaths.recipes());
@@ -109,7 +110,7 @@ class RecipeService {
 
       final ratingSnap = await tx.get(ratingRef);
       int oldStars = 0;
-      bool isNew = !ratingSnap.exists;
+      final bool isNew = !ratingSnap.exists;
       if (!isNew && ratingSnap.data() != null) {
         oldStars = (ratingSnap.data()!['stars'] as num?)?.toInt() ?? 0;
       }

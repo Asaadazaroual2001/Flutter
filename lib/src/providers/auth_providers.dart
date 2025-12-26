@@ -20,7 +20,7 @@ final currentUserProvider = Provider<User?>((ref) {
 
 final appUserProvider = StreamProvider<AppUser?>((ref) {
   final user = ref.watch(currentUserProvider);
-  if (user == null) return const Stream.empty();
+  if (user == null) return const Stream<AppUser?>.empty(); // ✅ هنا
   final service = ref.watch(authServiceProvider);
   return service.appUserStream(user.uid);
 });

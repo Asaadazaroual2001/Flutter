@@ -286,7 +286,7 @@ class _EditRecipeScreenState extends ConsumerState<EditRecipeScreen> {
 
               // ---------------- CATEGORY (DROPDOWN) ----------------
               DropdownButtonFormField<String>(
-                value: _selectedCategory,
+                initialValue: _selectedCategory,
                 decoration: const InputDecoration(labelText: "Category"),
                 items: _categories
                     .map(
@@ -313,7 +313,7 @@ class _EditRecipeScreenState extends ConsumerState<EditRecipeScreen> {
 
               // ---------------- DIFFICULTY DROPDOWN ----------------
               DropdownButtonFormField<String>(
-                value: _difficulty,
+                initialValue: _difficulty,
                 decoration: const InputDecoration(labelText: "Difficulty"),
                 items: const [
                   DropdownMenuItem(value: "Easy", child: Text("Easy")),
@@ -321,8 +321,7 @@ class _EditRecipeScreenState extends ConsumerState<EditRecipeScreen> {
                   DropdownMenuItem(value: "Hard", child: Text("Hard")),
                 ],
                 onChanged: (value) => setState(() => _difficulty = value),
-                validator: (v) =>
-                    v == null ? "Please select difficulty" : null,
+                validator: (v) => v == null ? "Please select difficulty" : null,
               ),
               const SizedBox(height: 12),
 
@@ -362,8 +361,7 @@ class _EditRecipeScreenState extends ConsumerState<EditRecipeScreen> {
                   ? const CircularProgressIndicator()
                   : ElevatedButton(
                       onPressed: _saveRecipe,
-                      child:
-                          Text(isEdit ? "Save Changes" : "Create Recipe"),
+                      child: Text(isEdit ? "Save Changes" : "Create Recipe"),
                     ),
             ],
           ),

@@ -41,47 +41,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCUtpI9H5ZXS4beR_jHsGdtlVYn7-j_Lwo',
-    appId: '1:885728878370:web:0d7048cf6ad0c722a7cf7b',
-    messagingSenderId: '885728878370',
-    projectId: 'recipesapp-d3bf3',
-    authDomain: 'recipesapp-d3bf3.firebaseapp.com',
-    storageBucket: 'recipesapp-d3bf3.appspot.com',
+    apiKey: 'AIzaSyD1eKTikChOSpRExWSjoT9iIv7nmpM9tYk',
+    appId: '1:479513021796:web:ead0cc146ade7b39ccfe71',
+    messagingSenderId: '479513021796',
+    projectId: 'matchup-football',
+    authDomain: 'matchup-football.firebaseapp.com',
+    storageBucket: 'matchup-football.firebasestorage.app',
+    measurementId: 'G-1NYZDLEVGR',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCX6q-LoK-PC6JWZd7Zee-4tqnjNOyg_Sg',
-    appId: '1:885728878370:android:f69ed305a8dcc0d5a7cf7b',
-    messagingSenderId: '885728878370',
-    projectId: 'recipesapp-d3bf3',
-    storageBucket: 'recipesapp-d3bf3.appspot.com',
+    apiKey: 'AIzaSyDYy5K31EUDJwbCxq3NYbzyapEtqg106O4',
+    appId: '1:479513021796:android:90b965913cd8c457ccfe71',
+    messagingSenderId: '479513021796',
+    projectId: 'matchup-football',
+    storageBucket: 'matchup-football.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCE5nRGT1LQcerWUUNyAmgHIPbNtY6lmj4',
-    appId: '1:885728878370:ios:fcf611dca11e28b3a7cf7b',
-    messagingSenderId: '885728878370',
-    projectId: 'recipesapp-d3bf3',
-    storageBucket: 'recipesapp-d3bf3.appspot.com',
+    apiKey: 'AIzaSyBr4mHcB8VPCWS_LLNUx2X9qb7RuOOi_94',
+    appId: '1:479513021796:ios:08996e1c4c34cf83ccfe71',
+    messagingSenderId: '479513021796',
+    projectId: 'matchup-football',
+    storageBucket: 'matchup-football.firebasestorage.app',
     iosBundleId: 'com.example.flutterRecipesApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCE5nRGT1LQcerWUUNyAmgHIPbNtY6lmj4',
-    appId: '1:885728878370:ios:fcf611dca11e28b3a7cf7b',
-    messagingSenderId: '885728878370',
-    projectId: 'recipesapp-d3bf3',
-    storageBucket: 'recipesapp-d3bf3.appspot.com',
+    apiKey: 'AIzaSyBr4mHcB8VPCWS_LLNUx2X9qb7RuOOi_94',
+    appId: '1:479513021796:ios:08996e1c4c34cf83ccfe71',
+    messagingSenderId: '479513021796',
+    projectId: 'matchup-football',
+    storageBucket: 'matchup-football.firebasestorage.app',
     iosBundleId: 'com.example.flutterRecipesApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCUtpI9H5ZXS4beR_jHsGdtlVYn7-j_Lwo',
-    appId: '1:885728878370:web:72561d2583b6dc86a7cf7b',
-    messagingSenderId: '885728878370',
-    projectId: 'recipesapp-d3bf3',
-    authDomain: 'recipesapp-d3bf3.firebaseapp.com',
-    storageBucket: 'recipesapp-d3bf3.appspot.com',
+    apiKey: 'AIzaSyD1eKTikChOSpRExWSjoT9iIv7nmpM9tYk',
+    appId: '1:479513021796:web:12d92b30fb037332ccfe71',
+    messagingSenderId: '479513021796',
+    projectId: 'matchup-football',
+    authDomain: 'matchup-football.firebaseapp.com',
+    storageBucket: 'matchup-football.firebasestorage.app',
+    measurementId: 'G-34B43YV8H0',
   );
-
 }

@@ -175,8 +175,7 @@ class RecipeDetailScreen extends ConsumerWidget {
                 if (recipe.imageUrl.isNotEmpty)
                   // ✅ UPDATED: tap to open full-screen preview
                   GestureDetector(
-                    onTap: () =>
-                        _showImagePreview(context, recipe.imageUrl),
+                    onTap: () => _showImagePreview(context, recipe.imageUrl),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: CachedNetworkImage(
@@ -202,9 +201,9 @@ class RecipeDetailScreen extends ConsumerWidget {
                     if (snapshot.hasData && snapshot.data!.data() != null) {
                       final data = snapshot.data!.data()!;
                       displayName = (data['displayName'] ??
-                              data['name'] ??
-                              data['username'] ??
-                              'Unknown') as String;
+                          data['name'] ??
+                          data['username'] ??
+                          'Unknown') as String;
                       final rawPhoto = data['photoUrl'] ?? data['imageUrl'];
                       if (rawPhoto is String && rawPhoto.isNotEmpty) {
                         photoUrl = rawPhoto;
@@ -216,9 +215,8 @@ class RecipeDetailScreen extends ConsumerWidget {
                       children: [
                         CircleAvatar(
                           radius: 22,
-                          backgroundImage: photoUrl != null
-                              ? NetworkImage(photoUrl!)
-                              : null,
+                          backgroundImage:
+                              photoUrl != null ? NetworkImage(photoUrl) : null,
                           child: photoUrl == null
                               ? const Icon(Icons.person)
                               : null,
@@ -230,9 +228,8 @@ class RecipeDetailScreen extends ConsumerWidget {
                             children: [
                               Text(
                                 recipe.title,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headlineSmall,
+                                style:
+                                    Theme.of(context).textTheme.headlineSmall,
                               ),
                               const SizedBox(height: 2),
                               Text(
@@ -432,7 +429,7 @@ class _RatingSectionState extends ConsumerState<_RatingSection> {
                   final service = ref.read(recipeServiceProvider);
                   await service.rateRecipe(
                     recipeId: widget.recipeId,
-                    userId: user!.uid,
+                    userId: user.uid,
                     stars: _current.toInt(),
                   );
                 },
@@ -466,9 +463,9 @@ class _CommentTile extends StatelessWidget {
           final data = snapshot.data!.data()!;
           // adapt these keys to your User model if different
           displayName = (data['displayName'] ??
-                  data['name'] ??
-                  data['username'] ??
-                  'User') as String;
+              data['name'] ??
+              data['username'] ??
+              'User') as String;
           final rawPhoto = data['photoUrl'] ?? data['imageUrl'];
           if (rawPhoto is String && rawPhoto.isNotEmpty) {
             photoUrl = rawPhoto;
@@ -477,8 +474,7 @@ class _CommentTile extends StatelessWidget {
 
         return ListTile(
           leading: CircleAvatar(
-            backgroundImage:
-                photoUrl != null ? NetworkImage(photoUrl!) : null,
+            backgroundImage: photoUrl != null ? NetworkImage(photoUrl) : null,
             child: photoUrl == null ? const Icon(Icons.person) : null,
           ),
           title: Text(
@@ -508,8 +504,7 @@ class _AddCommentField extends ConsumerStatefulWidget {
   const _AddCommentField({required this.recipeId});
 
   @override
-  ConsumerState<_AddCommentField> createState() =>
-      _AddCommentFieldState();
+  ConsumerState<_AddCommentField> createState() => _AddCommentFieldState();
 }
 
 class _AddCommentFieldState extends ConsumerState<_AddCommentField> {
@@ -563,8 +558,7 @@ class _AddCommentFieldState extends ConsumerState<_AddCommentField> {
         Expanded(
           child: TextField(
             controller: _ctrl,
-            decoration:
-                const InputDecoration(hintText: 'Write a comment...'),
+            decoration: const InputDecoration(hintText: 'Write a comment...'),
           ),
         ),
         const SizedBox(width: 8),

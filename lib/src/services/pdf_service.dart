@@ -21,8 +21,8 @@ class PdfService {
 
     pdf.addPage(
       pw.MultiPage(
-        pageTheme: pw.PageTheme(
-          margin: const pw.EdgeInsets.all(24),
+        pageTheme: const pw.PageTheme(
+          margin: pw.EdgeInsets.all(24),
         ),
         build: (context) => [
           pw.Text(

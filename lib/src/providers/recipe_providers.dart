@@ -52,7 +52,8 @@ final filteredRecipesProvider = Provider<List<Recipe>>((ref) {
         bool matchesSearch = true;
         if (query.isNotEmpty) {
           final inTitle = recipe.title.toLowerCase().contains(query);
-          final inDescription = recipe.description.toLowerCase().contains(query);
+          final inDescription =
+              recipe.description.toLowerCase().contains(query);
           final inIngredients = recipe.ingredients.any((ing) {
             final name = ing.name.toLowerCase();
             final qty = ing.qty.toLowerCase();
@@ -76,7 +77,7 @@ final filteredRecipesProvider = Provider<List<Recipe>>((ref) {
         }
 
         // ----- PREP TIME FILTER -----
-        bool matchesPrepTime =
+        final bool matchesPrepTime =
             maxPrep == null || recipe.prepTimeMin <= maxPrep;
 
         return matchesSearch &&
